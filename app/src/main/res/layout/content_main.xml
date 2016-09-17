@@ -20,27 +20,33 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="REGISTER"
         android:id="@+id/textView"
+        android:textColor="#2CDCE8"
+        android:padding="50dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
         android:hint="Name"
-        android:textColorHint="#FFF" />
+        android:textColorHint="#FFF"
+        android:textColor="#FFF"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
         android:hint="Username"
-        android:textColorHint="#fff" />
+        android:textColorHint="#fff"
+        android:textColor="#FFF"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -49,12 +55,11 @@
         android:ems="10"
         android:id="@+id/editText3"
         android:hint="password"
+        android:textColorHint="#fff"
+        android:textColor="#FFF"
         android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
-        android:textColorHint="#fff" />
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
 
     <Button
         android:layout_width="wrap_content"
@@ -63,7 +68,7 @@
         android:id="@+id/btn2"
         android:onClick="onRegister"
         android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2" />
 
 </RelativeLayout>
