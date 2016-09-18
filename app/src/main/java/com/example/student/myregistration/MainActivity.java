@@ -44,14 +44,15 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.setTitle("Status");
 
 
-        if(name1.equals("")  || user1.equals("")  || password1.equals("")){
-            alertDialog.setMessage("Failed");
-            Toast.makeText(this,"Failed",Toast.LENGTH_LONG).show();
+        if(name1.equals("123")  && user1.equals("123")  && password1.equals("123")){
+            alertDialog.setMessage("SUCCESS");
+            Toast.makeText(this,"SUCCESS",Toast.LENGTH_LONG).show();
         }
         else{
-            alertDialog.setMessage("Success");
-            Toast.makeText(this,"Success",Toast.LENGTH_LONG).show();
+            alertDialog.setMessage("FAILED");
+            Toast.makeText(this,"FAILED",Toast.LENGTH_LONG).show();
         }
+
         alertDialog.show();
 
         Intent i=new Intent(this,Register.class);
