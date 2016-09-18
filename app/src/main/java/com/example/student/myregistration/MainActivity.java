@@ -10,10 +10,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText name,username,password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +32,28 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void onRegister(View view){
+        name=(EditText)findViewById(R.id.nameInput);
+        username=(EditText)findViewById(R.id.userInput);
+        password=(EditText)findViewById(R.id.passInput);
+
+
+        String name1 = name.getText().toString();
+        String user1=username.getText().toString();
+        String password1=password.getText().toString();
         AlertDialog alertDialog=new AlertDialog.Builder(this).create();
         alertDialog.setTitle("Status");
-        alertDialog.setMessage("Success");
+
+
+        if(name1.equals("")  || user1.equals("")  || password1.equals("")){
+            alertDialog.setMessage("Failed");
+            Toast.makeText(this,"Failed",Toast.LENGTH_LONG).show();
+        }
+        else{
+            alertDialog.setMessage("Success");
+            Toast.makeText(this,"Success",Toast.LENGTH_LONG).show();
+        }
         alertDialog.show();
-       Toast.makeText(this,"Success",Toast.LENGTH_LONG).show();
+
         Intent i=new Intent(this,Register.class);
         startActivity(i);
     }
