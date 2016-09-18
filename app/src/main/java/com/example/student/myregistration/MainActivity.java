@@ -1,5 +1,6 @@
 package com.example.student.myregistration;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void onRegister(View view){
+        AlertDialog alertDialog=new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Status");
+        alertDialog.setMessage("Success");
+        alertDialog.show();
        Toast.makeText(this,"Success",Toast.LENGTH_LONG).show();
         Intent i=new Intent(this,Register.class);
         startActivity(i);
