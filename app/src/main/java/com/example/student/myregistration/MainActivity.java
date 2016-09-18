@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void onRegister(View view){
+       Toast.makeText(this,"Success",Toast.LENGTH_LONG).show();
         Intent i=new Intent(this,Register.class);
         startActivity(i);
     }
