@@ -42,21 +42,11 @@ public class MainActivity extends AppCompatActivity {
         String password1=password.getText().toString();
         AlertDialog alertDialog=new AlertDialog.Builder(this).create();
         alertDialog.setTitle("Status");
+        BackgroundActivity bg=new BackgroundActivity(this);
+        bg.execute(name1,user1,password1);
 
 
-        if(name1.equals("123")  && user1.equals("123")  && password1.equals("123")){
-            alertDialog.setMessage("SUCCESS");
-            Toast.makeText(this,"SUCCESS",Toast.LENGTH_LONG).show();
-        }
-        else{
-            alertDialog.setMessage("FAILED");
-            Toast.makeText(this,"FAILED",Toast.LENGTH_LONG).show();
-        }
 
-        alertDialog.show();
-
-        Intent i=new Intent(this,Register.class);
-        startActivity(i);
     }
 
     @Override
